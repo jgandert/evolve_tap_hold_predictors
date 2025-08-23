@@ -1,6 +1,6 @@
 # Evolving Tap-Hold Predictors
 
-This repository is for finding functions that can be used to make predictions about whether certain cases are likely to be a tap or a hold. It's used in the [Predictive Tap-Hold community module for QMK](https://github.com/jgandert/qmk_modules/predictive_tap_hold).
+This repository is for finding functions that can be used to make predictions about whether certain cases are likely to be a tap or a hold. It's used in the [Predictive Tap-Hold community module for QMK](https://github.com/jgandert/qmk_modules/tree/main/predictive_tap_hold).
 
 The predictions are made using data points (e.g., duration between previous release and PTH press) that are available at the time of the respective event.
 
