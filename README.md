@@ -5,6 +5,8 @@ This repository is for finding functions that can be used to make predictions ab
 The predictions are made using data points (e.g., duration between previous release and PTH press) that are available at the time of the respective event.
 
 ## Prediction Functions
+Tap-hold terminology and key codes are used here, but note that the actual training data only knows mods (e.g. <kbd>Shift</kbd>) and non-mods (e.g. <kbd>Space</kbd>). The prediction functions job is then to predict whether a key is a *mod* or *not a mod*, which corresponds to the prediction of **tap** or **hold**.
+
 ### `FAST_STREAK_TAP`
 
 Predicts if a tap-hold is a tap (if tap is **not** chosen, then it could be a tap or a hold, so the remaining prediction functions, or the PTH logic handles the case)
@@ -47,7 +49,7 @@ Predict hold or tap for a triple-down case.
 
 ▶️ Start [evolve.kt](src/main/kotlin/evolve.kt).
 
-The `initialPopulation` variable contains the best found solutions. Note that we're using the decision trees in many cases.
+The `initialPopulation` variable contains the best found solutions. Note that we're using the decision trees in all but the `OVERLAP_MS_FOR_HOLD` and `FAST_STREAK_TAP` case, because it is much faster to produce them and their performance was better.
 
 It uses the [jenetics library](https://github.com/jenetics/jenetics).
 
